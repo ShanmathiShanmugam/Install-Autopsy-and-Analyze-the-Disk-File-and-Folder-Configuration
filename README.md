@@ -1,49 +1,42 @@
-# Analysis-of-the-Disk-Structure-using-Sleuth-Kit
-### Reg no: 212222100024
-### Name: LOKESH RAHUL V V
+# Install-Autopsy-and-Analyze-the-Disk-File-and-Folder-Configuration
 ## AIM:
-To analyze the disk structure of a given disk image using Sleuth Kit tools in Kali Linux.
+To install Autopsy on Kali Linux and analyze disk images, files, and folder configurations for digital forensic purposes.
 
 ## DESIGN STEPS:
 ### Step 1:
-Obtain or create a disk image file (e.g., disk.dd) to analyze. Open the terminal in Kali Linux.
+Install Autopsy using the terminal with the command:
 
 ### Step 2:
-Use Sleuth Kit tools like mmls, fsstat, and fls to examine the partition layout, file system details, and file listing.
+Launch Autopsy from the terminal or application menu and create a new case.
 
 ### Step 3:
-Interpret the output of the tools to understand the disk structure, including partitions, sectors, and files.
+Add a disk image or file to the case and analyze the contents such as deleted files, metadata, and folder structure.
 
 ## PROGRAM:
-Sleuth Kit Disk Analysis Commands
-Sleuth Kit Disk Analysis Commands
+1. Autopsy Web Interface
+Launch Autopsy:
 
-✅ Option 1: Create a Sample Disk Image (for Testing)
+You can start Autopsy via terminal, which opens the web interface:
 
-Let’s create a 10MB blank disk image and simulate file system activity:
+```bash
+autopsy
 ```
-cd ~/Downloads
+It will be accessible at ```http://localhost:9999``` by default in your browser.
 
-# Step 1: Create an empty disk image
-dd if=/dev/zero of=disk.dd bs=1M count=10
-
-# Step 2: Format it with a file system (like FAT32)
-mkfs.vfat disk.dd
-```
 ## OUTPUT:
-![WhatsApp Image 2025-05-22 at 17 57 09_9701cb78](https://github.com/user-attachments/assets/1c772fe8-7481-4d66-9d4d-2b0cca70b22a)
-## Create Disk
-![image](https://github.com/user-attachments/assets/d6785ef2-0c56-407c-9acf-d81b77070a81)
-### mmls
-```
-mmls disk.dd
-```
+![WhatsApp Image 2025-05-22 at 18 17 44_c073edb0](https://github.com/user-attachments/assets/2c2d09a4-9292-4403-ae85-255a76b12d92)
+![WhatsApp Image 2025-05-22 at 18 17 44_94447387](https://github.com/user-attachments/assets/e81e6ced-ec1a-4bdb-a15b-deb70b789789)
+![image](https://github.com/user-attachments/assets/9cb055ba-5b27-4ad2-a64c-816bbbf828c9)
 
-### fls
-```
-fls -f fat -o 0 disk.dd
-```
-![WhatsApp Image 2025-05-22 at 17 53 37_17e3a1b7](https://github.com/user-attachments/assets/e7dfa92c-f864-4f57-a217-84371b7ccba8)
+![image](https://github.com/user-attachments/assets/36e75b8a-6253-4a26-b1a0-149e1056092f)
+
+![image](https://github.com/user-attachments/assets/6da8db99-04b4-4ebc-8fc8-647ec74b77ce)
+
+![image](https://github.com/user-attachments/assets/5c772a4e-11c7-4ed2-9fd2-49ed86adec46)
+
+![image](https://github.com/user-attachments/assets/ce44d676-88b4-4735-bfdd-11ce92bacf10)
+![image](https://github.com/user-attachments/assets/1a8d9c96-ed94-4a7b-820c-91fa9388b2fc)
+
 
 ## RESULT:
-The analysis was performed successfully using Sleuth Kit, and the disk structure was understood in detail.
+Autopsy was installed successfully and used to analyze disk, file, and folder configuration for forensic investigation.
